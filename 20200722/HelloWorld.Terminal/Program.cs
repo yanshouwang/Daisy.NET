@@ -1,4 +1,7 @@
-﻿using System;
+﻿using HelloWorld.Terminal.Vehicle;
+using System;
+using System.Windows;
+using System.Windows.Forms;
 
 namespace HelloWorld.Terminal
 {
@@ -6,7 +9,20 @@ namespace HelloWorld.Terminal
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            Bicycle bicycle = new Bicycle();
+            Car car = new Car();
+            car.Started += OnStarted;
+            bicycle.Run();
+            car.Run();
+            Console.WriteLine(bicycle.Speed);
+            Console.WriteLine(car.Speed);
+            Console.ReadLine();
+        }
+
+        private static void OnStarted(object sender, EventArgs e)
+        {
+            Car car = (Car)sender;
+            Console.WriteLine(car.Speed);
         }
     }
 }
