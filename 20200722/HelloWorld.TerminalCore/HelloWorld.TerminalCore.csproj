@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Tools\Tools.csproj" />
+    <ProjectReference Include="..\..\20200723\Tools\Tools.csproj" />
   </ItemGroup>
 
 </Project>
