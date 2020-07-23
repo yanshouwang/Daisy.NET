@@ -6,9 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="Tools">
-      <HintPath>C:\Users\yanshouwang\Desktop\Tools.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\..\Tools\Tools.csproj" />
   </ItemGroup>
 
 </Project>
