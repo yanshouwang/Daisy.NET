@@ -3,22 +3,28 @@ using System;
 using System.Windows;
 using System.Windows.Forms;
 
+/// <summary>
+/// 
+/// </summary>
 namespace HelloWorld.Terminal
 {
+    /// <summary>
+    /// 
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
-            Bicycle bicycle = new Bicycle();
-            Car car = new Car();
-            car.Started += OnStarted;
-            bicycle.Run();
-            car.Run();
-            Console.WriteLine(bicycle.Speed);
-            Console.WriteLine(car.Speed);
+            decimal a = 0.0M;
             Console.ReadLine();
+
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender">      </param>
+        /// <param name="e" ></param>
         private static void OnStarted(object sender, EventArgs e)
         {
             Car car = (Car)sender;
