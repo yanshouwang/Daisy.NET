@@ -10,7 +10,8 @@ namespace Overflow
     {
         static void Main(string[] args)
         {
-
+            BadGuy badGuy = new BadGuy();
+            badGuy.BadMethod();
         }
     }
 
@@ -18,7 +19,6 @@ namespace Overflow
     {
         public void BadMethod()
         {
-            int a = 100;
             BadMethod();
         }
     }
