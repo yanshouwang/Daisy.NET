@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Tools;
 
 namespace HelloWorld.TerminalCore
@@ -7,10 +8,18 @@ namespace HelloWorld.TerminalCore
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Calculator calculator = new Calculator();
-            double result= calculator.Sub(5, 4);
-            Console.WriteLine(result);
+            var values = new Dictionary<string, int>()
+            {
+                ["ABC"] = 0,
+                ["BCD"] = 1,
+                ["XYZ"] = 1,
+            };
+            values.Remove("BCD");
+            values.Add("DICK", 10);
+            foreach (var value in values)
+            {
+                Console.WriteLine(value.Key);
+            }
         }
     }
 }

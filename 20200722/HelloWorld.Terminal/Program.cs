@@ -15,9 +15,7 @@ namespace HelloWorld.Terminal
     {
         static void Main(string[] args)
         {
-            decimal a = 0.0M;
-            Console.ReadLine();
-
+            Console.WriteLine(args[0]);
         }
 
         /// <summary>
