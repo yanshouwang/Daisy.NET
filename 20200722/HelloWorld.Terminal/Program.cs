@@ -1,5 +1,6 @@
 ﻿using HelloWorld.Terminal.Vehicle;
 using System;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
 
@@ -13,22 +14,18 @@ namespace HelloWorld.Terminal
     /// </summary>
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            decimal a = 0.0M;
-            Console.ReadLine();
+            // 求圆的面积
+            double a = Calculator.GetCircleAera(20.0);
+            // 求圆柱的体积
+            double v1 = Calculator.GetCylinderVolume(20.0, 10.0);
+            // 求圆锥的面积
+            double v2 = Calculator.GetConeVolume(20.0, 10.0);
 
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender">      </param>
-        /// <param name="e" ></param>
-        private static void OnStarted(object sender, EventArgs e)
-        {
-            Car car = (Car)sender;
-            Console.WriteLine(car.Speed);
+            Console.WriteLine(a);
+            Console.WriteLine(v1);
+            Console.WriteLine(v2);
         }
     }
 }
