@@ -1,5 +1,8 @@
 ﻿using HelloWorld.Terminal.Vehicle;
 using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
@@ -14,18 +17,22 @@ namespace HelloWorld.Terminal
     /// </summary>
     class Program
     {
+        static ConcurrentBag<int> _values = new ConcurrentBag<int>();
+
         static void Main()
         {
-            // 求圆的面积
-            double a = Calculator.GetCircleAera(20.0);
-            // 求圆柱的体积
-            double v1 = Calculator.GetCylinderVolume(20.0, 10.0);
-            // 求圆锥的面积
-            double v2 = Calculator.GetConeVolume(20.0, 10.0);
-
-            Console.WriteLine(a);
-            Console.WriteLine(v1);
-            Console.WriteLine(v2);
+            Add(0, "A");
+            Console.ReadLine();
         }
+
+        private static void Add(int a = 2, string b = "A", int c = 2)
+        {
+
+        }
+    }
+
+    class A
+    {
+        public int Value { get; set; }
     }
 }
